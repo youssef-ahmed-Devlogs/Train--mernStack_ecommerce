@@ -34,5 +34,19 @@ a {
 }
 .layout main {
   grid-area: main;
-  background-color: #f1f1f1;
+  background-color: #f8f8f8;
+}
+.layout main .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px 0;
+  gap: 20px;
+}
+.layout main .wrapper .products-wrapper {
+  flex: 4;
+}
+.layout main .wrapper .filter-wrapper {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 10px;
 }
