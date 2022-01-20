@@ -25,6 +25,39 @@ a {
   display: block;
 }
 
+.ReactModal__Overlay {
+  z-index: 10;
+}
+
+.close-modal {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.red {
+  background-color: $primaryColor;
+}
+
+.blue {
+  background-color: $secondColor;
+}
+
+.white {
+  background-color: $whiteColor;
+}
+
+.gold {
+  background-color: gold;
+}
+
+.brown {
+  background-color: brown;
+}
+
+.black {
+  background-color: $blackColor;
+}
+
 .layout {
   display: grid;
   grid-template-areas: "header" "main" "footer";
