@@ -1,0 +1,38 @@
+header {
+  grid-area: header;
+  background-color: #ffffff;
+  color: #e34133;
+  display: flex;
+  align-items: center;
+}
+header .header-content {
+  display: flex;
+  align-items: center;
+}
+header .header-content .brand {
+  color: inherit;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  height: 60px;
+  font-weight: bold;
+}
+header .header-content .links-list {
+  display: flex;
+  align-items: center;
+  flex: 2;
+  color: #e34133;
+}
+header .header-content .links-list a {
+  color: inherit;
+  transition: 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  height: 60px;
+}
+header .header-content .links-list a:hover, header .header-content .links-list a.active {
+  background-color: #bf211e;
+  color: #ffffff;
+}
