@@ -1,3 +1,6 @@
+// *** variables ***
+@import "../sass/variables.scss";
+
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +21,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: #222;
+  color: $blackColor;
   display: block;
 }
 
@@ -27,12 +30,14 @@ a {
   grid-template-areas: "header" "main" "footer";
   height: 100%;
   grid-template-rows: 60px 1fr 40px;
-}
-.layout .container {
-  width: 80%;
-  margin: 0 auto;
-}
-.layout main {
-  grid-area: main;
-  background-color: #f1f1f1;
+
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  main {
+    grid-area: main;
+    background-color: $lightColor;
+  }
 }

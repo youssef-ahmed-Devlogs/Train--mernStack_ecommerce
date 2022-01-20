@@ -1,0 +1,47 @@
+// *** variables ***
+@import "../../sass/variables";
+
+header {
+  grid-area: header;
+  background-color: $whiteColor;
+  color: $primaryColor;
+  display: flex;
+  align-items: center;
+
+  .header-content {
+    display: flex;
+    align-items: center;
+
+    .brand {
+      color: inherit;
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      flex: 1;
+      height: 60px;
+      font-weight: bold;
+    }
+
+    .links-list {
+      display: flex;
+      align-items: center;
+      flex: 2;
+      color: $primaryColor;
+
+      a {
+        color: inherit;
+        transition: $transition-3;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        height: 60px;
+
+        &:hover,
+        &.active {
+          background-color: $primaryColor-alt;
+          color: $whiteColor;
+        }
+      }
+    }
+  }
+}

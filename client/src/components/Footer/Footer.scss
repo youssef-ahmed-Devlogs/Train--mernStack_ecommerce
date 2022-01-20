@@ -1,0 +1,10 @@
+@import "../../sass/variables";
+
+footer {
+  grid-area: footer;
+  background-color: $primaryColor-alt;
+  color: $whiteColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
