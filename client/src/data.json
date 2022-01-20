@@ -1,0 +1,34 @@
+[
+  {
+    "id": "id1",
+    "title": "computer",
+    "imageUrl": "/images/product1.jpg",
+    "desc": "This is product 1",
+    "price": 140,
+    "color": ["red", "blue", "white"]
+  },
+  {
+    "id": "id2",
+    "title": "iphone 12 pro - red",
+    "imageUrl": "/images/product2.jpg",
+    "desc": "This is product 2",
+    "price": 100,
+    "color": ["red", "gold", "white"]
+  },
+  {
+    "id": "id3",
+    "title": "Airbods pro",
+    "imageUrl": "/images/product3.jpg",
+    "desc": "This is product 3",
+    "price": 30,
+    "color": ["black", "white"]
+  },
+  {
+    "id": "id4",
+    "title": "Jacket",
+    "imageUrl": "/images/product4.jpg",
+    "desc": "This is product 4",
+    "price": 30,
+    "color": ["brown", "black", "white"]
+  }
+]
