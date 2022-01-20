@@ -82,4 +82,5 @@ a {
   flex: 1;
   background-color: #ffffff;
   padding: 10px;
+  border-radius: 5px;
 }
