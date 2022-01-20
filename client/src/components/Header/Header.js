@@ -1,5 +1,6 @@
 import React from "react";
 import "../../css/Header/Header.css";
+import { words } from "../../words";
 
 const Header = () => {
   return (
@@ -7,7 +8,7 @@ const Header = () => {
       <div className="container">
         <div className="header-content">
           <a href="#" className="brand">
-            SOUQ
+            {words.headerLogo}
           </a>
 
           <ul className="links-list">
