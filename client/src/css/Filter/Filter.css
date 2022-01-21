@@ -11,6 +11,9 @@
   margin-bottom: 20px;
   font-size: 0.8rem;
 }
+.filter-wrapper .filter-by-category {
+  margin-bottom: 20px;
+}
 .filter-wrapper .filter-head {
   display: block;
   font-weight: bold;
