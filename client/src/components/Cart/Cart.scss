@@ -50,4 +50,25 @@
       }
     }
   }
+
+  .checkout {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $whiteColor;
+    padding: 20px 30px;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 2rem;
+
+    .select-products {
+      outline: none;
+      border: none;
+      background: none;
+      color: $secondColor;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  }
 }

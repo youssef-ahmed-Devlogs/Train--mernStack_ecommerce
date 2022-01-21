@@ -1,8 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../css/Cart/Cart.css";
+import CheckoutForm from "../CheckoutForm/CheckoutForm";
 
 const Cart = (props) => {
   const { cartProducts, removeFromCart } = props;
+  const [showForm, setShowForm] = useState(false);
+  const [value, setValue] = useState("");
+
+  // Calculate Total
+  const calcTotal = () => {
+    // ** Without reduce function ***
+
+    // let total = 0;
+
+    // cartProducts.forEach((product) => {
+    //   total += product.price * product.qty;
+    // });
+
+    // return total;
+
+    // *** With reduce function ***
+
+    return cartProducts.reduce(
+      (acc, product) => acc + product.price * product.qty,
+      0
+    );
+  };
+
+  const handelChange = (e) => {
+    setValue((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const submitOrder = (e) => {
+    e.preventDefault();
+    const order = { ...value };
+    console.log(order);
+  };
+
   return (
     <div className="cart-wrapper">
       <div className="cart-title">
@@ -38,6 +75,22 @@ const Cart = (props) => {
           );
         })}
       </div>
+      {cartProducts.length && (
+        <div className="checkout">
+          <div className="total">Total is: {calcTotal()}$</div>
+          <button className="select-products" onClick={() => setShowForm(true)}>
+            Select Products
+          </button>
+        </div>
+      )}
+
+      {showForm && (
+        <CheckoutForm
+          setShowForm={setShowForm}
+          submitOrder={submitOrder}
+          handelChange={handelChange}
+        />
+      )}
     </div>
   );
 };

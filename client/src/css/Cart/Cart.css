@@ -39,3 +39,22 @@
   cursor: pointer;
   color: #bf211e;
 }
+.cart-wrapper .checkout {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 20px 30px;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.cart-wrapper .checkout .select-products {
+  outline: none;
+  border: none;
+  background: none;
+  color: #4081ec;
+  font-size: 1rem;
+  cursor: pointer;
+}
