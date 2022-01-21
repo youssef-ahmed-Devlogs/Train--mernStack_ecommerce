@@ -1,0 +1,32 @@
+.filter-wrapper .filter-title {
+  margin-bottom: 5px;
+  font-size: 1.6rem;
+}
+.filter-wrapper .products-count {
+  color: #ffffff;
+  padding: 5px;
+  width: max-content;
+  background-color: #4081ec;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 0.8rem;
+}
+.filter-wrapper .filter-by-category {
+  margin-bottom: 20px;
+}
+.filter-wrapper .filter-head {
+  display: block;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+.filter-wrapper .filter-category {
+  display: block;
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}

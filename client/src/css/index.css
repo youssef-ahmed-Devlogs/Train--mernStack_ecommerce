@@ -22,6 +22,39 @@ a {
   display: block;
 }
 
+.ReactModal__Overlay {
+  z-index: 10;
+}
+
+.close-modal {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.red {
+  background-color: #e34133;
+}
+
+.blue {
+  background-color: #4081ec;
+}
+
+.white {
+  background-color: #ffffff;
+}
+
+.gold {
+  background-color: gold;
+}
+
+.brown {
+  background-color: brown;
+}
+
+.black {
+  background-color: #222;
+}
+
 .layout {
   display: grid;
   grid-template-areas: "header" "main" "footer";
@@ -49,4 +82,5 @@ a {
   flex: 1;
   background-color: #ffffff;
   padding: 10px;
+  border-radius: 5px;
 }
