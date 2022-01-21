@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../../css/Products/Products.css";
 import ProductModal from "../Products/ProductModal";
-import Bounce from "react-reveal";
+import Bounce from "react-reveal/Bounce";
 
 const Products = (props) => {
   const { products, addToCart } = props;
@@ -20,12 +20,9 @@ const Products = (props) => {
     <Bounce top cascade>
       <div className="products-wrapper">
         {products.map((product) => (
-          <div
-            onClick={() => openModal(product)}
-            key={product.id}
-            className="product-item"
-          >
+          <div key={product.id} className="product-item">
             <img
+              onClick={() => openModal(product)}
               className="product-item_img"
               src={product.imageUrl}
               alt={product.title}

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../../css/Cart/Cart.css";
 import CheckoutForm from "../CheckoutForm/CheckoutForm";
+import Bounce from "react-reveal/Bounce";
 
 const Cart = (props) => {
   const { cartProducts, removeFromCart } = props;
@@ -49,32 +50,34 @@ const Cart = (props) => {
           "Empty Cart"
         )}
       </div>
-      <div className="cart-items">
-        {cartProducts.map((product) => {
-          return (
-            <div className="cart-item" key={product.id}>
-              <img
-                src={product.imageUrl}
-                alt={product.title}
-                title={product.title}
-              />
-              <div className="cart-info">
-                <h5 className="item-title">{product.title}</h5>
-                <span className="item-qty">{product.qty}</span>
-                <span className="item-price">{product.price}$</span>
+      <Bounce bottom cascade>
+        <div className="cart-items">
+          {cartProducts.map((product) => {
+            return (
+              <div className="cart-item" key={product.id}>
+                <img
+                  src={product.imageUrl}
+                  alt={product.title}
+                  title={product.title}
+                />
+                <div className="cart-info">
+                  <h5 className="item-title">{product.title}</h5>
+                  <span className="item-qty">{product.qty}</span>
+                  <span className="item-price">{product.price}$</span>
+                </div>
+                <div className="cart-actions">
+                  <button
+                    className="remove"
+                    onClick={() => removeFromCart(product.id)}
+                  >
+                    Remove
+                  </button>
+                </div>
               </div>
-              <div className="cart-actions">
-                <button
-                  className="remove"
-                  onClick={() => removeFromCart(product.id)}
-                >
-                  Remove
-                </button>
-              </div>
-            </div>
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
+      </Bounce>
       {cartProducts.length && (
         <div className="checkout">
           <div className="total">Total is: {calcTotal()}$</div>
