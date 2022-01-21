@@ -2,12 +2,18 @@ import React from "react";
 import "../../css/Filter/Filter.css";
 
 const Filter = (props) => {
-  const { handelFilterByCategory, handelSortByPrice, category, sort } = props;
+  const {
+    products,
+    handelFilterByCategory,
+    handelSortByPrice,
+    category,
+    sort,
+  } = props;
 
   return (
     <div className="filter-wrapper">
       <h2 className="filter-title">Filter Products</h2>
-      <div className="products-count">10 Products</div>
+      <div className="products-count">{products.length} Products</div>
       <div className="filter-by-category">
         <span className="filter-head">Category</span>
         <select
