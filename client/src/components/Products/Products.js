@@ -3,6 +3,8 @@ import "../../css/Products/Products.css";
 import ProductModal from "../Products/ProductModal";
 
 const Products = (props) => {
+  const { products, addToCart } = props;
+
   const [product, setProduct] = useState("");
 
   const openModal = (product) => {
@@ -15,7 +17,7 @@ const Products = (props) => {
 
   return (
     <div className="products-wrapper">
-      {props.products.map((product) => (
+      {products.map((product) => (
         <div
           onClick={() => openModal(product)}
           key={product.id}
@@ -36,7 +38,9 @@ const Products = (props) => {
               </h3>
               <span className="price">{product.price}$</span>
             </div>
-            <button className="add-to-cart">Add to cart</button>
+            <button className="add-to-cart" onClick={() => addToCart(product)}>
+              Add to cart
+            </button>
           </div>
         </div>
       ))}
